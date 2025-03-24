@@ -1,0 +1,14 @@
+{
+  "name": "private3dchat4birds",
+  "version": "0.0.1",
+  "description": "Realtime multi-user private 3d chat for maximum 4 birds and many guests running in modern web browsers",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^1.7.4",
+    "three": "^0.126.0"
+  }
+}

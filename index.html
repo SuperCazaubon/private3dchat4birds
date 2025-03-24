@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+	<link rel="icon" href="img/favicon.gif" type="image/gif" >
+    <title>private3dchat4birds</title>
+    <script src="/socket.io/socket.io.js"></script>
+	<script src="/node_modules/three/build/three.js"></script>
+	<script src="/js/OrbitControls.js"></script>
+	<script src="/js/JDLoader.min.js"></script>
+	<script src="/js/GLTFLoader.js"></script>
+    <script src="/js/client_world.js"></script>
+    <style>
+        body {
+            margin: 0px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+	<div id="container"></div>
+	<script>
+
+		var socket = io();
+
+		socket.on('updatePlayerPosition', function(data){
+			updatePlayerPosition(data);
+		});
+		socket.on('connect', function(){
+			loadWorld();
+			socket.emit('requestOldPlayers', {});
+		});
+		socket.on('addCurrentPlayer', function(data){
+			addCurrentPlayer(data);
+		});
+		socket.on('addOtherPlayer', function(data){
+			addOtherPlayer(data);
+		});
+		socket.on('removeOtherPlayer', function(data){
+			removeOtherPlayer(data);
+		});
+		socket.on('changeSkyBox', function(dataNewIndice){
+			changeSkyBox(dataNewIndice);
+		});
+		socket.on('receiveMessageFrom', function(dataMessage){
+			receiveMessageFrom(dataMessage);
+		});
+		
+
+	</script>
+	<div style="width:100%;text-align:center;font-size:43px;color:blue;font-weight:bold;background-color:white;border: 8px solid blue;"><img src="favicon.gif" style="height:43px"></img> Private 3d chat for 4 birds...🐤 🦃 🦆 🦚 🦜 🦉 🐧 🐦 🦅 🦩 🦢 🦆 🐓  </div>
+</body>
+</html>
