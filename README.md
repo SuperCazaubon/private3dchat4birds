@@ -21,13 +21,13 @@ Using node.js express.js socket.io and three.js
   - a big teapot ove the earth ..
   
 ## Installation
-First time
-  Download ZIP from github
-  Unzip
-  Run powershell 1_install_the_app.ps1
-After
-  Run 2_run_the_app.ps1 
-  Invite people to enter "https://localhost:8080" in any modern web browser ... 
-  and enjoy the flying experience !;-))...
+*First time
+  - Download ZIP from github
+  - Unzip
+  - Run powershell 1_install_the_app.ps1
+*After
+  - Run 2_run_the_app.ps1 
+  - Invite many people to enter "https://localhost:8080" in any modern web browser (Or just click on "3_one_more_web_browser_listening_at_localhost_8080.url") ... 
+  - Enjoy the flying experience !;-))...
 
 
